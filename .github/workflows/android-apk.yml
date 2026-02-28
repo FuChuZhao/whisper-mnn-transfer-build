@@ -51,6 +51,7 @@ jobs:
         uses: gradle/actions/setup-gradle@v3
         with:
           gradle-version: "8.6"
+          cache-disabled: true
 
       - name: Build Debug APK (via source repo script)
         working-directory: source
@@ -65,4 +66,3 @@ jobs:
           name: ${{ inputs.artifact_name }}
           path: out/ci/
           retention-days: 1
-
